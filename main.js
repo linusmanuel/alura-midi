@@ -5,4 +5,8 @@ const playSoundPom = () => {
 
 const listOfKeyboard = document.querySelectorAll('.tecla');
 
-listOfKeyboard[0].onclick = playSoundPom;
+let count = 0;
+while (count < listOfKeyboard.length) {
+	listOfKeyboard[count].onclick = playSoundPom;
+	count++;
+}

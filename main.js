@@ -1,16 +1,15 @@
+const listOfKeyboard = document.querySelectorAll('.tecla');
+
 const playSound = (idElementAudio) => {
 	document.querySelector(idElementAudio).play();
 };
 
-const listOfKeyboard = document.querySelectorAll('.tecla');
-
-let count = 0;
-while (count < listOfKeyboard.length) {
+for (let count = 0; count < listOfKeyboard.length; count++) {
 	const keyboard = listOfKeyboard[count];
-	const idAudio = `#som_${keyboard.classList[1]}`;
-	console.log(idAudio);
+	const instrument = keyboard.classList[1];
+	const idAudio = `#som_${instrument}`;
+
 	keyboard.onclick = function () {
 		playSound(idAudio);
 	};
-	count++;
 }

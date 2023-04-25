@@ -6,8 +6,11 @@ const listOfKeyboard = document.querySelectorAll('.tecla');
 
 let count = 0;
 while (count < listOfKeyboard.length) {
-	listOfKeyboard[count].onclick = function () {
-		playSound('#som_tecla_pom');
+	const keyboard = listOfKeyboard[count];
+	const idAudio = `#som_${keyboard.classList[1]}`;
+	console.log(idAudio);
+	keyboard.onclick = function () {
+		playSound(idAudio);
 	};
 	count++;
 }

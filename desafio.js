@@ -1,20 +1,33 @@
 const telScreen = document.querySelector('#tel');
 const listKeyboard = document.querySelectorAll('.keyboard');
+const validIds = [
+	'one',
+	'two',
+	'three',
+	'four',
+	'five',
+	'six',
+	'seven',
+	'eight',
+	'nine',
+	'zero',
+	'hash',
+	'asterisk',
+];
 
 const writeNumber = (idElement) => {
 	const telButton = document.querySelector(`.${idElement}`);
 	telScreen.value += telButton.value;
-	const telNumber = [];
-	console.log(telNumber);
-
-	return telNumber.push(telScreen.value);
 };
 
 for (let count = 0; count < listKeyboard.length; count++) {
 	const keyboard = listKeyboard[count];
-	const idKey = keyboard.classList[1];
+	const idKeyboard = keyboard.classList[1];
 
-	keyboard.onclick = () => {
-		writeNumber(idKey);
-	};
+	keyboard.addEventListener('click', () => {
+		if (!validIds.includes(idKeyboard)) {
+			alert(`ID inválido, ID: ${idKeyboard}`);
+		}
+		writeNumber(idKeyboard);
+	});
 }

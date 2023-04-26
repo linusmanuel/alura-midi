@@ -13,9 +13,14 @@ for (let count = 0; count < listOfKeyboard.length; count++) {
 		playSound(idAudio);
 	};
 
-	keyboard.onkeydown = () => {
-		keyboard.classList.add('ativa');
+	keyboard.onkeydown = (event) => {
+		console.log(event);
+		if (event.code === 'Space') {
+			keyboard.classList.add('ativa');
+		}
 	};
 
-	keyboard.onkeyup = () => keyboard.classList.remove('ativa');
+	keyboard.onkeyup = (event) => {
+		if (event.code === 'Space') keyboard.classList.remove('ativa');
+	};
 }

@@ -30,4 +30,7 @@ for (let count = 0; count < listKeyboard.length; count++) {
 		}
 		writeNumber(idKeyboard);
 	});
+
+	keyboard.onkeydown = () => keyboard.classList.add('ativa');
+	keyboard.onkeyup = () => keyboard.classList.remove('ativa');
 }

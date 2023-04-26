@@ -12,4 +12,10 @@ for (let count = 0; count < listOfKeyboard.length; count++) {
 	keyboard.onclick = function () {
 		playSound(idAudio);
 	};
+
+	keyboard.onkeydown = () => {
+		keyboard.classList.add('ativa');
+	};
+
+	keyboard.onkeyup = () => keyboard.classList.remove('ativa');
 }

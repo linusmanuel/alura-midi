@@ -15,24 +15,71 @@
 		/>
 
 		<link rel="icon" type="image/png" href="images/bateria.png" />
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/estilos.css" />
+		<!-- <link rel="stylesheet" href="css/reset.css" /> -->
+		<!-- <link rel="stylesheet" href="css/estilos.css" /> -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body>
-		<h1>Alura Midi</h1>
-
+	<body
+		class="bg-gradient-to-r from-green-400 to-blue-500 h-screen flex flex-col justify-center items-center p-8"
+	>
+		<h1 class="text-2xl font-bold mb-8 text-sky-900">Alura Midi</h1>
 		<section class="teclado">
-			<button class="tecla tecla_pom">Pom</button>
-			<button class="tecla tecla_clap">Clap</button>
-			<button class="tecla tecla_tim">Tim</button>
-
-			<button class="tecla tecla_puff">Puff</button>
-			<button class="tecla tecla_splash">Splash</button>
-			<button class="tecla tecla_toim">Toim</button>
-
-			<button class="tecla tecla_psh">Psh</button>
-			<button class="tecla tecla_tic">Tic</button>
-			<button class="tecla tecla_tom">Tom</button>
+			<div
+				class="bg-white p-3 rounded-md flex justify-evenly flex-wrap gap-2 shadow-lg max-w-sm"
+			>
+				<button
+					class="tecla tecla_pom flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Pom
+				</button>
+				<button
+					class="tecla tecla_clap flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-hands-clapping"></i> Clap
+				</button>
+				<button
+					class="tecla tecla_tim flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Tim
+				</button>
+				<button
+					class="tecla tecla_puff flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Puff
+				</button>
+				<button
+					class="tecla tecla_splash flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Splash
+				</button>
+				<button
+					class="tecla tecla_toim flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-compact-disc"></i> Toim
+				</button>
+				<button
+					class="tecla tecla_psh flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Psh
+				</button>
+				<button
+					class="tecla tecla_tic flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Tic
+				</button>
+				<button
+					class="tecla tecla_tom flex flex-col justify-center items-center bg-blue-300 focus:bg-red-400 focus:text-white bg-blue-400 p-2 rounded-md text-sky-900 font-bold w-20 ease-in duration-300 grow"
+				>
+					<i class="fa-solid fa-music"></i> Tom
+				</button>
+			</div>
 		</section>
 
 		<audio src="sounds/keyq.wav" id="som_tecla_pom"></audio>

@@ -1,7 +1,10 @@
 const listOfKeyboard = document.querySelectorAll('.tecla');
 
-const playSound = (idElementAudio) => {
-	document.querySelector(idElementAudio).play();
+const playSound = (elementAudio) => {
+	const element = document.querySelector(elementAudio);
+	console.log(element);
+	if (element === null) alert('Elemento não encontrado');
+	if (element != null && element.localName === 'audio') element.play();
 };
 
 for (let count = 0; count < listOfKeyboard.length; count++) {
@@ -14,13 +17,14 @@ for (let count = 0; count < listOfKeyboard.length; count++) {
 	};
 
 	keyboard.onkeydown = (event) => {
-		console.log(event);
-		if (event.code === 'Space') {
+		const spaceOrEnter = event.code === 'Space' || event.code === 'Enter';
+		if (spaceOrEnter) {
 			keyboard.classList.add('ativa');
 		}
 	};
 
 	keyboard.onkeyup = (event) => {
-		if (event.code === 'Space') keyboard.classList.remove('ativa');
+		const spaceOrEnter = event.code === 'Space' || event.code === 'Enter';
+		if (spaceOrEnter) keyboard.classList.remove('ativa');
 	};
 }
